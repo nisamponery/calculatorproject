@@ -1,5 +1,8 @@
 package com.example.calculator.services;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class MultiplicationService {
 	private int x;
 	private int y;

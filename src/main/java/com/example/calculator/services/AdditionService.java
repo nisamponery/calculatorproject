@@ -1,8 +1,10 @@
 package com.example.calculator.services;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class AdditionService {
-	
-	//TODO Create two int variables
+
 	int x;
 	int y;
 	public int getX() {
@@ -17,22 +19,15 @@ public class AdditionService {
 	public void setY(int y) {
 		this.y = y;
 	}
-	//TODO Create Constructor to take the arguments 
-	public AdditionService(int a,int b) {
-		x = a;
-		y = b;
+
+	public AdditionService(int x,int y) {
+		this.x = x;
+		this.y = y;
 	}
-	//TODO Create method to return the sum of the 2 variables
+
 	public int getSum(){
 		return x + y;
 	}
 
-/*	public static void main (String [] args) {
-		AdditionService addobj = new AdditionService(12,15);
-		addobj.setX(10);
-		System.out.println("TEST");
-		System.out.println("x =" + addobj.getX());
-		System.out.println("y =" + addobj.getY());
-		System.out.println("x + y =" + addobj.getSum());
-	}*/
+
 }

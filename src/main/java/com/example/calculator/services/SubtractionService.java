@@ -1,8 +1,10 @@
 package com.example.calculator.services;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class SubtractionService {
 	
-	//TODO Create two int variables
 		private int x;
 		private int y;
 		
@@ -18,12 +20,11 @@ public class SubtractionService {
 		public void setY(int y) {
 			this.y = y;
 		}
-		//TODO Create Constructor to take the arguments 
+		
 		public SubtractionService(int a,int b) {
 			x = a;
 			y = b;
 		}
-		//TODO Create method to return the difference of the 2 varaibles
 		public int getDiff(){
 			return x - y;
 		}
