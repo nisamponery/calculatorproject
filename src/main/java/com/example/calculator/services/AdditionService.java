@@ -3,31 +3,14 @@ package com.example.calculator.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AdditionService {
+public class AdditionService implements ArithmeticService {
 
-	int x;
-	int y;
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
-
-	public AdditionService(int x,int y) {
-		this.x = x;
-		this.y = y;
-	}
-
-	public int getSum(){
+	
+	public int getResult(int x, int y){
 		return x + y;
 	}
+
+	
 
 
 }

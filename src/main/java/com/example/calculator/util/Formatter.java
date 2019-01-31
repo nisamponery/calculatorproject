@@ -1,5 +1,7 @@
 package com.example.calculator.util;
 
+import java.util.HashMap;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,15 +14,50 @@ public class Formatter {
 	 * if the code is getting too cumbersome 
 	 * always consider breaking it down to helper methods
 	 */
-	public String process (String Input){
+	public boolean validateInput (HashMap<String,String> map){
 		/*
 		 * I have created two dummy helper methods below try to use them while finsihing
 		 * these tasks and if you feel additional mehtods are necessary feel free to create
 		 * them.
 		 * Also if you have a better approach you can experiment as well
 		 */
-		return "TEST";
+		
+		String num1 = map.get("num1");
+		String oper	= map.get("operator");
+		String num2 = map.get("num2");
+		
+		
+		return validateNumbers(num1) && validateNumbers(num2) && validateOperator(oper) ;
 	} 
+	
+	private boolean validateNumbers (String num){
+		try{
+			int x = Integer.parseInt(num);
+		}
+		catch(NumberFormatException e){
+			
+			System.out.println("Exception caught : Invalid number inout");
+			return false;
+		}
+		
+		return true;
+	}
+	
+	private boolean validateOperator (String oper){
+		try{
+			if(!OperatorConstants.operList.contains(oper)){
+				System.out.println("Invalid operator");
+				return false;
+			}
+		}
+		catch(Exception e){
+			
+			System.out.println("Exception caught : Invalid operator");
+			return false;
+		}
+		
+		return true;
+	}
 	
 	
 	//TODO: Create a function format the given input

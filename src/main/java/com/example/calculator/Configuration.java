@@ -18,24 +18,24 @@ public class Configuration {
 	@Bean
 	AdditionService addService(){
 		
-		return new AdditionService(0 , 0);
+		return new AdditionService();
 	}
 	
 	@Bean
 	SubtractionService subService(){
 		
-		return new SubtractionService(0 , 0);
+		return new SubtractionService();
 	}
 	
 	@Bean
 	DivisionService divService(){
 		
-		return new DivisionService(0 , 0);
+		return new DivisionService();
 	}
 
 	@Bean
 	MultiplicationService mulService(){
 		
-		return new MultiplicationService(0 , 0);
+		return new MultiplicationService();
 	}
 }
